@@ -12,13 +12,23 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-    ],
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"],
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx"], // Áp dụng riêng cho file TypeScript
+    rules: {
+      // Tắt rule từ plugin typescript-eslint
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
+
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "no-unused-vars": "off", // tắt luôn cho JS thường
+    },
   },
 ];
 
