@@ -1,0 +1,47 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
+export default function ProjectCard() {
+  return (
+    <section className="py-20 pt-0 text-sm">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-9 gap-6 items-center">
+          {/* Logo + Date */}
+          <div className="flex flex-col items-start md:items-center gap-4 col-span-1 md:col-span-3">
+            <div className="flex items-center space-x-0">
+              <div className="w-[50px] h-[50px] flex items-center justify-center">
+                <Image
+                  alt=""
+                  width={200}
+                  height={200}
+                  src={"https://w.ladicdn.com/s400x400/57b167c9ca57d39c18a1c57c/business-011-20231106081214-8ssds.png"}
+                />
+              </div>
+              <span className="font-bold flex flex-col text-[#003978]">
+                <span className="text-4xl leading-[32px]">Hexble</span>
+                <span className="text-sm leading-3 tracking-[9px]">Business</span>
+              </span>
+            </div>
+            <p className="text-gray-300 text-sm font-bold">Contact project: May 25, 2022</p>
+          </div>
+
+          {/* Nội dung bên phải */}
+          <div className="space-y-3 col-span-1 md:col-span-4">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900">Lập kế hoạch phát triển cho Viral World</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Cần xem xét các yếu tố quan trọng như mục tiêu kinh doanh, thị trường mục tiêu, sản phẩm/dịch vụ, tiếp thị
+              và tài chính. Mỗi bước cần được điều tra & đánh giá kỹ lưỡng. Kế hoạch phát triển cần linh hoạt để có thể
+              thích ứng với thay đổi trong môi trường kinh doanh.
+            </p>
+            <Link href="#" className="text-gray-800 underline font-medium hover:underline inline-block">
+              Xem chi tiết
+            </Link>
+          </div>
+        </div>
+        <div className="col-span-2"></div>
+      </div>
+    </section>
+  );
+}

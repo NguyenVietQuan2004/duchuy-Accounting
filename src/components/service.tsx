@@ -1,0 +1,85 @@
+"use client";
+
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowIcon, BoxIcon, CheckedIcon, MoneyIcon } from "../../public/icons";
+
+// data/services.ts
+export const services = [
+  {
+    icon: CheckedIcon,
+    title: "Accounting",
+    items: [
+      "Financial reporting & analysis",
+      "Budgeting & forecasting",
+      "Business structuring & advisory",
+      "Financial services for scaling companies",
+    ],
+  },
+
+  {
+    icon: ArrowIcon,
+    title: "Tax Solutions",
+    items: [
+      "Individual & business tax returns",
+      "BAS, GST & PAYG lodgements",
+      "Tax planning and optimisation strategies",
+      "ATO support & representation",
+    ],
+  },
+  {
+    icon: BoxIcon,
+    title: "Bookkeeping",
+    items: [
+      "Cloud-based bookkeeping (Xero, MYOB, QuickBooks)",
+      "Payroll & superannuation management",
+      "Accounts payable & receivable",
+      "Real-time financial dashboards",
+    ],
+  },
+  {
+    icon: MoneyIcon,
+    title: "Other Compliance Services",
+    items: [
+      "State-based tax and business compliance",
+      "Payroll tax and WorkCover registration",
+      "ASIC and ABN compliance support",
+    ],
+  },
+];
+function Service() {
+  return (
+    <section className="bg-blue-50 pt-12 pb-20">
+      <div className="max-w-[1300px] mx-auto px-40">
+        <div className="grid grid-cols-12 gap-6">
+          {services.map((service, idx) => (
+            <Card
+              key={idx}
+              className={`group hover:bg-[#2760A5] rounded-sm border-none p-0 hover:text-white transition-all duration-300
+          ${
+            idx >= 2
+              ? "col-span-6" // 2 thẻ dưới to full 6 + 6
+              : idx === 0
+              ? "col-span-5 col-start-2" // thẻ 1 nhỏ căn giữa
+              : "col-span-5 col-start-7" // thẻ 2 nhỏ căn giữa
+          }`}
+            >
+              <CardContent className="p-6 flex flex-col items-center gap-4 border-none  ">
+                <div className="">{<service.icon />}</div>
+                <h3 className="text-xl font-bold">{service.title}</h3>
+                <ul className="space-y-1 text-sm">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="text-gray-700 group-hover:text-white leading-snug">
+                      • {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Service;
