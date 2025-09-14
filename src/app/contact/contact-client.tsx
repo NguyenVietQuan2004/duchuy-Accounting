@@ -73,7 +73,7 @@ function ContactClient() {
             <div className="flex items-center space-x-3">
               <Mail className="min-w-6 min-h-6 text-black" />
               <a href="mailto:Support@hexblebusiness.vn" className="font-bold text-lg hover:text-blue-600">
-                Support@hexblebusiness.vn
+                Support@ntnps.vn
               </a>
             </div>
 
@@ -86,14 +86,14 @@ function ContactClient() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://hexblebusiness.vn
+                https://ntnps.vn
               </a>
             </div>
 
             {/* Address */}
             <div className="flex items-center space-x-3">
               <MapPin className="min-w-6 min-h-6 text-black" />
-              <span className="font-bold text-lg">24th Floor, MD Complex Building, 68 Nguyen Co Thach, Hanoi</span>
+              <span className="font-bold text-lg">Address: Level 24, 300 Barangaroo Avenue, Barangaroo NSW 2000</span>
             </div>
           </div>
         </div>

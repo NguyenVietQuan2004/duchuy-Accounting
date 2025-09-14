@@ -16,10 +16,10 @@ export default function Footer() {
             <div className="w-[50px] h-[50px] flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} />
             </div>
-            <span className="font-bold flex flex-col text-[#003978]">
-              <span className="text-[22px] leading-5">Hexble</span>
+            {/* <span className="font-bold flex flex-col text-[#003978]">
+              <span className="text-[22px] leading-5"></span>
               <span className="text-[12px] leading-3 tracking-[4px]">Business</span>
-            </span>
+            </span> */}
           </div>
           <p className="text-sm text-gray-600">Smart financial strategy creating value</p>
           {/* Social */}

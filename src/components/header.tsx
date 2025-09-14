@@ -32,10 +32,10 @@ export default function Header() {
           {/* Logo + Brand */}
           <Link href={"/"} className="flex items-center space-x-2">
             {/* Logo (SVG đơn giản ví dụ) */}
-            <div className="w-[60px] h-[60px] flex items-center justify-center">
-              <Image alt="" width={200} height={200} src={logoWhite} />
+            <div className="w-[60px] md:w-[70px] lg:w-[90px]  flex items-center justify-center">
+              <Image alt="" width={200} height={200} src={logoWhite} className="w-full h-full" />
             </div>
-            <span className="text-white font-bold text-[26px]">Hexble Business</span>
+            {/* <span className="text-white font-bold text-[26px]"> Business</span> */}
           </Link>
 
           {/* Hotline */}
