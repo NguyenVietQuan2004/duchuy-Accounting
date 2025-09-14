@@ -18,7 +18,7 @@ function MyPartner() {
   const swiperRef = useRef<any>(null);
 
   return (
-    <div className="pb-16 px-4 mx-auto">
+    <div className="py-0 pb-8 lg:py-16 px-0 lg:px-4 mx-auto">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={"auto"}
@@ -35,21 +35,21 @@ function MyPartner() {
         {images.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="select-none cursor-pointer flex items-center justify-center max-w-[80%] md:max-w-[60%] !h-[500px]"
+            className="select-none cursor-pointer flex items-center justify-center w-full lg:max-w-[60%] !h-[500px]"
           >
             <Image
               alt={`Partner ${index}`}
               src={item}
               width={1200}
               height={520}
-              className="object-cover w-full h-full rounded-xl shadow"
+              className="object-cover w-full h-full lg:rounded-xl shadow"
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Custom Navigation */}
-      <div className="flex justify-center gap-4 mt-14 mr-40 float-right">
+      <div className="hidden lg:flex justify-center gap-4 mt-14 mr-40 float-right">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="w-10 h-10 text-3xl cursor-pointer border border-blue-700 flex items-center justify-center rounded hover:bg-blue-700 hover:text-white transition"

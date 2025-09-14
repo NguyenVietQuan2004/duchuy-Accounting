@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function ProjectCard() {
   return (
-    <section className="py-20 pt-0 text-sm">
+    <section className="py-6 lg:pb-20 pt-0 text-sm">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-9 gap-6 items-center">
           {/* Logo + Date */}
-          <div className="flex flex-col items-start md:items-center gap-4 col-span-1 md:col-span-3">
+          <div className="flex flex-col items-start lg:items-center gap-4 col-span-1 md:col-span-3">
             <div className="flex items-center space-x-0">
               <div className="w-[50px] h-[50px] flex items-center justify-center">
                 <Image
@@ -28,19 +28,19 @@ export default function ProjectCard() {
           </div>
 
           {/* Nội dung bên phải */}
-          <div className="space-y-3 col-span-1 md:col-span-4">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900">Lập kế hoạch phát triển cho Viral World</h3>
+          <div className="space-y-3 col-span-6 md:col-span-6 lg:col-span-5">
+            <h3 className="text-xl lg:text-2xl font-bold text-gray-900">Development Planning for Viral World</h3>
             <p className="text-gray-600 leading-relaxed">
-              Cần xem xét các yếu tố quan trọng như mục tiêu kinh doanh, thị trường mục tiêu, sản phẩm/dịch vụ, tiếp thị
-              và tài chính. Mỗi bước cần được điều tra & đánh giá kỹ lưỡng. Kế hoạch phát triển cần linh hoạt để có thể
-              thích ứng với thay đổi trong môi trường kinh doanh.
+              It is important to consider key factors such as business goals, target market, products/services,
+              marketing, and finances. Each step should be carefully researched and evaluated. The development plan
+              needs to be flexible to adapt to changes in the business environment.
             </p>
             <Link href="#" className="text-gray-800 underline font-medium hover:underline inline-block">
-              Xem chi tiết
+              View Details
             </Link>
           </div>
         </div>
-        <div className="col-span-2"></div>
+        {/* <div className="col-span-2"></div> */}
       </div>
     </section>
   );

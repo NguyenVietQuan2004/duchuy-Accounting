@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "BMBCAR",
+  title: "Accounting",
 };
 
 export default function RootLayout({

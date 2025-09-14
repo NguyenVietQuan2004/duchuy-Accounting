@@ -19,16 +19,16 @@ function MissionSection() {
 
         {/* Cột nền xanh bên phải */}
         <div className="md:w-1/2 w-full bg-[#084ea4] text-white flex items-center">
-          <div className="p-10 md:p-16">
+          <div className="p-8 lg:p-10 md:p-16">
             <p className="uppercase text-sm tracking-wide mb-3 font-semibold">Who We Are</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission & Values</h2>
-            <p className="text-base leading-relaxed mb-6 text-justify">
+            <h2 className="text-[26px] md:text-4xl font-bold mb-6">Our Mission & Values</h2>
+            <p className=" leading-relaxed text-sm md:text-base mb-6 lg:text-justify">
               Our team of certified accountants and tax professionals offers scalable, industry-specific solutions that
               simplify compliance, optimize performance, and unlock growth. We’re not just number crunchers—we’re your
               strategic financial partners.
             </p>
 
-            <p className="text-base leading-relaxed mb-6 text-justify">
+            <p className=" leading-relaxed text-sm md:text-base mb-6 lg:text-justify">
               We help you choose and set up the right structure (sole trader, partnership, company, trust, or
               not-for-profit) to suit your goals, protect your assets, and optimize tax outcomes.
             </p>

@@ -17,27 +17,27 @@ export default function ContactFormSection() {
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
-    // xử lý gửi data ở đây
+    // handle form submission here
   };
 
   return (
-    <section className="bg-white py-32">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-5 gap-6 px-8">
-        {/* Cột trái */}
+    <section className="bg-white py-16 lg:py-32">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 px-8">
+        {/* Left Column */}
         <div className="flex flex-col justify-start col-span-2">
-          <h2 className="text-3xl md:text-4xl leading-[60px] font-bold mb-4">
-            Đăng ký nhận tư vấn ngay để có giải pháp tối ưu nhất!
+          <h2 className="text-3xl leading-10 text-center md:text-4xl lg:leading-[60px] font-bold mb-4">
+            Sign Up for a Consultation Now to Get the Best Solution!
           </h2>
-          <p className="text-gray-600">{/* bạn có thể thêm mô tả nhỏ ở đây nếu muốn */}</p>
+          <p className="text-gray-600">{/* optional small description here */}</p>
         </div>
 
-        {/* Cột phải */}
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-full pl-18 col-span-3 space-y-10">
+        {/* Right Column */}
+        <form onSubmit={handleSubmit(onSubmit)} className="bg-white w-full lg:pl-18 lg:col-span-3 space-y-10">
           <div>
             <input
               type="text"
-              placeholder="Họ và Tên*"
-              {...register("name", { required: "Vui lòng nhập họ tên" })}
+              placeholder="Full Name*"
+              {...register("name", { required: "Please enter your full name" })}
               className="w-full border-b text-gray-500 pl-6 border-gray-300 focus:border-[#2760A5] outline-none py-2"
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
@@ -47,7 +47,7 @@ export default function ContactFormSection() {
             <input
               type="email"
               placeholder="Email*"
-              {...register("email", { required: "Vui lòng nhập email" })}
+              {...register("email", { required: "Please enter your email" })}
               className="w-full border-b text-gray-500 pl-6 border-gray-300 focus:border-[#2760A5] outline-none py-2"
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
@@ -56,8 +56,8 @@ export default function ContactFormSection() {
           <div>
             <input
               type="text"
-              placeholder="Số điện thoại*"
-              {...register("phone", { required: "Vui lòng nhập số điện thoại" })}
+              placeholder="Phone Number*"
+              {...register("phone", { required: "Please enter your phone number" })}
               className="w-full border-b text-gray-500 pl-6 border-gray-300 focus:border-[#2760A5] outline-none py-2"
             />
             {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
@@ -67,7 +67,7 @@ export default function ContactFormSection() {
             type="submit"
             className="bg-[#2760A5] hover:bg-white hover:text-[#2760A5] duration-300 border border-[#2760A5] cursor-pointer text-white font-semibold py-3 px-6 w-full"
           >
-            Nhận Tư Vấn Ngay
+            Get Consultation Now
           </button>
         </form>
       </div>

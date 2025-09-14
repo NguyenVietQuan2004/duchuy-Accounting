@@ -6,6 +6,10 @@ import ServicesSection from "./_components/service";
 import ProjectCard from "./_components/project-card";
 import { Briefcase, DollarSign, Shield, Lock, Users } from "lucide-react";
 import MyPartner from "./_components/my-partner";
+import RequestCallback from "./_components/request-callback";
+import BlogSection from "./_components/blogs";
+import ClientFeedback from "./_components/client-feedback";
+import MyPartnerLogo from "./_components/my-partner-logo";
 
 const services = [
   {
@@ -51,18 +55,18 @@ function HomeClient() {
             }}
           />
         )}
-        <div className="relative max-w-[1200px] py-[120px] h-full pt-[160px] lg:pt-[200px] mx-auto px-4">
+        <div className="relative max-w-[1200px] py-[120px] h-full pt-[100px] lg:pt-[200px] mx-auto px-4">
           <div className="max-w-[540px]">
             <div className="text-[18px]">
               We understand that no two businesses are alike. Whether you're launching your first venture, managing a
               growing team, or leading a large corporation, your financial needs evolve—and we evolve with you.
             </div>
-            <div className="text-[48px] font-bold">Chúng tôi giúp gì được cho bạn?</div>
+            <div className="text-4xl lg:text-[48px] font-bold">How may we assist you?</div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto  -translate-y-1/4">
+      <div className="max-w-[1200px] hidden lg:block mx-auto  -translate-y-1/4">
         {/* Hàng 1: 3 services */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto px-4">
           {services.slice(0, 3).map((service, idx) => (
@@ -89,11 +93,32 @@ function HomeClient() {
           ))}
         </div>
       </div>
-      <MissionSection />
 
-      <ServicesSection />
-      <MyPartner />
-      <ProjectCard />
+      <div className="max-w-[1200px] mx-auto lg:hidden  -translate-y-1/6">
+        {/* Hàng 1: 3 services */}
+        <div className="grid grid-cols-1 gap-4 mx-auto px-4">
+          {services.map((service, idx) => (
+            <Card key={idx} className="bg-white  transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="flex justify-center mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative -translate-y-[120px] lg:-translate-y-0">
+        <MissionSection />
+        <ServicesSection />
+        <MyPartner />
+        <ProjectCard />
+        <RequestCallback />
+        <BlogSection />
+        <ClientFeedback />
+        <MyPartnerLogo />
+      </div>
     </div>
   );
 }

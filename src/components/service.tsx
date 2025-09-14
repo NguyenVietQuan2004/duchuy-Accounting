@@ -48,19 +48,19 @@ export const services = [
 ];
 function Service() {
   return (
-    <section className="bg-blue-50 pt-12 pb-20">
-      <div className="max-w-[1300px] mx-auto px-40">
-        <div className="grid grid-cols-12 gap-6">
+    <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-12  pb-8 lg:pb-20">
+      <div className="max-w-[1300px] mx-auto px-0 lg:px-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {services.map((service, idx) => (
             <Card
               key={idx}
               className={`group hover:bg-[#2760A5] rounded-sm border-none p-0 hover:text-white transition-all duration-300
           ${
             idx >= 2
-              ? "col-span-6" // 2 thẻ dưới to full 6 + 6
+              ? "lg:col-span-6" // 2 thẻ dưới to full 6 + 6
               : idx === 0
-              ? "col-span-5 col-start-2" // thẻ 1 nhỏ căn giữa
-              : "col-span-5 col-start-7" // thẻ 2 nhỏ căn giữa
+              ? "lg:col-span-5 lg:col-start-2" // thẻ 1 nhỏ căn giữa
+              : "lg:col-span-5 lg:col-start-7" // thẻ 2 nhỏ căn giữa
           }`}
             >
               <CardContent className="p-6 flex flex-col items-center gap-4 border-none  ">

@@ -21,36 +21,36 @@ export default function ContactForm() {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    // Gửi dữ liệu tại đây
+    // Submit the data here
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <Input placeholder="Họ và tên *" {...register("full_name", { required: "Vui lòng nhập họ tên" })} />
+      <Input placeholder="Full Name *" {...register("full_name", { required: "Please enter your full name" })} />
       {errors.full_name && <p className="text-sm text-red-500">{errors.full_name.message}</p>}
 
       <Input
-        placeholder="Số điện thoại liên hệ *"
-        {...register("phone_number", { required: "Vui lòng nhập số điện thoại" })}
+        placeholder="Phone Number *"
+        {...register("phone_number", { required: "Please enter your phone number" })}
       />
       {errors.phone_number && <p className="text-sm text-red-500">{errors.phone_number.message}</p>}
 
       <Input
         placeholder="Email *"
         {...register("email", {
-          required: "Vui lòng nhập email",
+          required: "Please enter your email",
           pattern: {
             value: /^\S+@\S+$/i,
-            message: "Email không hợp lệ",
+            message: "Invalid email address",
           },
         })}
       />
       {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
 
       <Textarea
-        placeholder="Lời nhắn *"
+        placeholder="Message *"
         className="min-h-[120px]"
-        {...register("message", { required: "Vui lòng nhập lời nhắn" })}
+        {...register("message", { required: "Please enter your message" })}
       />
       {errors.message && <p className="text-sm text-red-500">{errors.message.message}</p>}
 
@@ -58,7 +58,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full bg-[#124D9B] py-6 hover:bg-white hover:text-[#124d9b] border border-transparent hover:border-[#124d9b] transition-all duration-300 text-white"
       >
-        GỬI LỜI NHẮN
+        SEND MESSAGE
       </Button>
     </form>
   );
