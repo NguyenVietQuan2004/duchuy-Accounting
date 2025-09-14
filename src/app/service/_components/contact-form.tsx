@@ -1,5 +1,6 @@
 "use client";
 
+import RtlOpacityTightWrapper from "@/components/animations/rtl-opacity-tight-wrapper";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
@@ -25,9 +26,11 @@ export default function ContactFormSection() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 px-8">
         {/* Left Column */}
         <div className="flex flex-col justify-start col-span-2">
-          <h2 className="text-3xl leading-10 text-center md:text-4xl lg:leading-[60px] font-bold mb-4">
-            Sign Up for a Consultation Now to Get the Best Solution!
-          </h2>
+          <RtlOpacityTightWrapper>
+            <h2 className="text-3xl leading-10 text-center md:text-4xl lg:leading-[60px] font-bold mb-4">
+              Sign Up for a Consultation Now to Get the Best Solution!
+            </h2>
+          </RtlOpacityTightWrapper>
           <p className="text-gray-600">{/* optional small description here */}</p>
         </div>
 

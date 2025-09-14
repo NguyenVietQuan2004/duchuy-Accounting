@@ -58,10 +58,10 @@ export default {
       keyframes: {
         opacity: {
           from: {
-            opacity: 0,
+            opacity: "0",
           },
           to: {
-            opacity: 1,
+            opacity: "1",
           },
         },
 

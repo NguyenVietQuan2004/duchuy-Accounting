@@ -38,6 +38,76 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Định nghĩa animation và keyframes trong @theme */
+}
+@theme {
+  --animate-fade-in: fade-in 1s ease-in-out forwards;
+  --animate-ltr-opacity: ltr-opacity 350ms linear forwards;
+  --animate-hetbietdatten1: hetbietdatten1 500ms linear forwards;
+  --animate-hetbietdatten2: hetbietdatten2 500ms linear forwards;
+  --animate-rtl-opacity: rtl-opacity 350ms ease-in-out forwards;
+  --animate-rtl-opacity-tight: rtl-opacity-tight 1100ms ease-in-out forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes ltr-opacity {
+    from {
+      opacity: 0;
+      left: -200px;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  @keyframes rtl-opacity-tight {
+    from {
+      opacity: 0;
+      left: 50px;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  @keyframes rtl-opacity {
+    from {
+      left: 100%;
+    }
+    to {
+      /* opacity: 1; */
+      left: 0;
+    }
+  }
+
+  @keyframes hetbietdatten1 {
+    from {
+      left: -20px;
+    }
+    to {
+      /* opacity: 1; */
+      left: 0;
+    }
+  }
+
+  @keyframes hetbietdatten2 {
+    from {
+      right: -20px;
+    }
+    to {
+      /* opacity: 1; */
+      right: 0;
+    }
+  }
 }
 
 :root {

@@ -2,6 +2,7 @@
 
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "./form";
+import FadeInWrapper from "@/components/animations/fade-in-wrapper";
 
 function ContactClient() {
   const img = "https://w.ladicdn.com/s1440x452/57b167c9ca57d39c18a1c57c/wf1agw3j20231115092001.jpg";
@@ -18,7 +19,7 @@ function ContactClient() {
             }}
           />
         )}
-        <div className=" animation-ltr-opacity relative max-w-[1200px] py-[120px] h-full pt-[100px] lg:pt-[120px] mx-auto px-4">
+        <div className=" animate-ltr-opacity relative max-w-[1200px] py-[120px] h-full pt-[100px] lg:pt-[120px] mx-auto px-4">
           <div className="text-[#003978] max-w-[540px]">
             <div className="text-[18px]">CONTACT</div>
             <div className="text-[36px] font-bold">With us! For Financial Consulting for your Business</div>
@@ -26,29 +27,31 @@ function ContactClient() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8 lg:py-20 flex flex-col gap-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Contact Info */}
-          <div className="flex flex-col gap-8 h-full">
-            <div className="h-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.056640960699!2d106.73078149999999!3d10.7301149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175254fc81ab34d%3A0xc416f38314923c3a!2sBMB%20Garage!5e0!3m2!1svi!2s!4v1750091279481!5m2!1svi!2s"
-                className="w-full h-full mt-2"
-                loading="lazy"
-              ></iframe>
+      <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8 lg:pb-20 flex flex-col gap-6">
+        <FadeInWrapper>
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Contact Info */}
+            <div className="flex flex-col gap-8 h-full">
+              <div className="h-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.056640960699!2d106.73078149999999!3d10.7301149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175254fc81ab34d%3A0xc416f38314923c3a!2sBMB%20Garage!5e0!3m2!1svi!2s!4v1750091279481!5m2!1svi!2s"
+                  className="w-full h-full mt-2"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="">
+              <h2 className="text-[#124D9B] text-3xl lg:text-4xl mt-4 lg:mt-0 font-bold">
+                Questions / Inquiries:
+                <br />
+              </h2>
+              <div className=" text-sm my-4"></div>
+              <ContactForm />
             </div>
           </div>
-
-          {/* Contact Form */}
-          <div className="">
-            <h2 className="text-[#124D9B] text-3xl lg:text-4xl mt-4 lg:mt-0 font-bold">
-              Questions / Inquiries:
-              <br />
-            </h2>
-            <div className=" text-sm my-4"></div>
-            <ContactForm />
-          </div>
-        </div>
+        </FadeInWrapper>
 
         <div className="mt-4 lg:mt-20 px-2 lg:px-10">
           {/* Heading */}
