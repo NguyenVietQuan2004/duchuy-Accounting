@@ -9,7 +9,7 @@ function ServiceClient() {
   return (
     <div>
       {/* Banner */}
-      <div className="relative h-[700px] mt-[140px]">
+      <div className="relative h-[700px] mt-[140px] max-w-screen overflow-hidden">
         {img && (
           <div
             className="absolute inset-0 bg-[position:50%_0%] bg-cover bg-no-repeat transition-opacity duration-500"
