@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Column 1 Logo */}
         <div className="space-y-4 col-span-1">
           <div className="flex items-center space-x-0">
-            <div className="w-[50px] h-[50px] flex items-center justify-center mr-1">
+            <div className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]  flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} />
             </div>
             {/* <span className="font-bold flex flex-col text-[#003978]">
