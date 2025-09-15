@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function MissionSection() {
   return (
-    <section className="max-w-[1200px] mx-auto pb-20">
+    <section className="max-w-[1200px] mx-auto pb-4 md:pb-20">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 w-full">
           {/* Cột hình bên trái */}

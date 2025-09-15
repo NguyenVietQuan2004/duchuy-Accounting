@@ -46,8 +46,71 @@
   --animate-ltr-opacity: ltr-opacity 350ms linear forwards;
   --animate-hetbietdatten1: hetbietdatten1 500ms linear forwards;
   --animate-hetbietdatten2: hetbietdatten2 500ms linear forwards;
+  --animate-card: card 300ms linear forwards;
   --animate-rtl-opacity: rtl-opacity 350ms ease-in-out forwards;
   --animate-rtl-opacity-tight: rtl-opacity-tight 1100ms ease-in-out forwards;
+  --animate-ltr-opacity-tight: ltr-opacity-tight 150ms ease-in-out forwards;
+
+  --animate-in-top-left: in-top-left 800ms ease-out forwards;
+  /* Bay từ góc trên phải */
+  --animate-in-top-right: in-top-right 800ms ease-out forwards;
+  /* Bay từ góc dưới trái */
+  --animate-in-bottom-left: in-bottom-left 800ms ease-out forwards;
+  /* Bay từ góc dưới phải */
+  --animate-in-bottom-right: in-bottom-right 800ms ease-out forwards;
+
+  @keyframes in-top-left {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes in-top-right {
+    from {
+      opacity: 0;
+      transform: translate(50%, -50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes in-bottom-left {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes in-bottom-right {
+    from {
+      opacity: 0;
+      transform: translate(50%, 50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes card {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   @keyframes fade-in {
     from {
@@ -73,6 +136,17 @@
     from {
       opacity: 0;
       left: 50px;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  @keyframes ltr-opacity-tight {
+    from {
+      opacity: 0;
+      left: -10px;
     }
     to {
       opacity: 1;

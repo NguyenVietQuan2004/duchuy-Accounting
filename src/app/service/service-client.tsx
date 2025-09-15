@@ -7,7 +7,7 @@ import Service from "@/components/service";
 function ServiceClient() {
   const img = "https://w.ladicdn.com/s1440x620/57b167c9ca57d39c18a1c57c/op6ZCVTO20231115065153.jpeg";
   return (
-    <div>
+    <div className="max-w-screen overflow-hidden">
       {/* Banner */}
       <div className="relative h-[700px] mt-[140px] max-w-screen overflow-hidden">
         {img && (

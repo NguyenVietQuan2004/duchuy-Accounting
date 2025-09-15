@@ -2,6 +2,7 @@
 
 import FadeInWrapper from "@/components/animations/fade-in-wrapper";
 import RtlOpacityTightWrapper from "@/components/animations/rtl-opacity-tight-wrapper";
+import CountUpNumber from "@/components/count";
 import React from "react";
 
 type Props = {
@@ -31,7 +32,7 @@ export default function HeroWithStats({
       <div className="max-w-[1300px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left: Title + description */}
-          <RtlOpacityTightWrapper>
+          <RtlOpacityTightWrapper className="opacity-0">
             <div className="md:pr-8">
               <h2 className="text-2xl lg:text-4xl font-extrabold mb-6 leading-tight">
                 Financial Freedom for
@@ -44,19 +45,21 @@ export default function HeroWithStats({
             </div>
           </RtlOpacityTightWrapper>
           {/* Right: Stats */}
-          <FadeInWrapper>
-            <div className="flex flex-col md:flex-row md:justify-around items-center gap-8">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-[56px] font-extrabold text-[#2760A5]">1,980+</div>
-                <div className="text-sm md:text-base text-[#2760A5] font-bold mt-2">Projects Completed</div>
+          <div className="flex flex-col md:flex-row md:justify-around items-center gap-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl lg:text-[56px] font-extrabold text-[#2760A5]">
+                <CountUpNumber target={1980} />+
               </div>
-
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-[56px] font-extrabold text-[#2760A5]">879</div>
-                <div className="text-sm md:text-base text-[#2760A5] font-bold mt-2">Satisfied Clients</div>
-              </div>
+              <div className="text-sm md:text-base text-[#2760A5] font-bold mt-2">Projects Completed</div>
             </div>
-          </FadeInWrapper>
+
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl lg:text-[56px] font-extrabold text-[#2760A5]">
+                <CountUpNumber target={879} />
+              </div>
+              <div className="text-sm md:text-base text-[#2760A5] font-bold mt-2">Satisfied Clients</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

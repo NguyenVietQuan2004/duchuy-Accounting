@@ -9,7 +9,7 @@ function ContactClient() {
   return (
     <div>
       {/* Banner */}
-      <div className="relative h-[500px] mt-[140px]">
+      <div className="relative h-[600px] mt-[140px]">
         {img && (
           <div
             className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
@@ -28,7 +28,7 @@ function ContactClient() {
       </div>
 
       <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8 lg:pb-20 flex flex-col gap-6">
-        <FadeInWrapper>
+        <FadeInWrapper className="opacity-0">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Contact Info */}
             <div className="flex flex-col gap-8 h-full">

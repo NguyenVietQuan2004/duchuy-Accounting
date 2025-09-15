@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function FadeInWrapper({ children }: { children: React.ReactNode }) {
+export default function FadeInWrapper({ children, className }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +19,7 @@ export default function FadeInWrapper({ children }: { children: React.ReactNode 
   }, []);
 
   return (
-    <div ref={ref} className={`${isVisible && "animate-fade-in relative"}`}>
+    <div ref={ref} className={`${className} ${isVisible && "animate-fade-in relative"}`}>
       {children}
     </div>
   );

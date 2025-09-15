@@ -10,6 +10,10 @@ import RequestCallback from "./_components/request-callback";
 import BlogSection from "./_components/blogs";
 import ClientFeedback from "./_components/client-feedback";
 import MyPartnerLogo from "./_components/my-partner-logo";
+import MyClient from "./_components/my-client";
+import FadeInWrapper from "@/components/animations/fade-in-wrapper";
+import CardAnimationWrapper from "@/components/animations/card-animation";
+import LtrOpacityTightWrapper from "@/components/animations/ltr-opacity-tight-wrapper";
 
 const services = [
   {
@@ -43,7 +47,7 @@ function HomeClient() {
   const img = "https://w.ladicdn.com/s1440x620/57b167c9ca57d39c18a1c57c/op6ZCVTO20231115065153.jpeg";
 
   return (
-    <div>
+    <div className="max-w-screen overflow-hidden">
       {/* Banner */}
       <div className="relative h-[700px] mt-[140px]">
         {img && (
@@ -66,33 +70,65 @@ function HomeClient() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] hidden lg:block mx-auto  -translate-y-1/4">
-        {/* Hàng 1: 3 services */}
+      <div className="max-w-[1200px] hidden lg:grid grid-cols-12 gap-10 mx-auto -translate-y-1/4">
+        {services.map((service, idx) => (
+          <CardAnimationWrapper
+            idx={idx}
+            key={idx}
+            className={`opacity-0 overflow-hidden col-span-4 
+        ${idx == 3 ? "col-start-3" : ""} ${idx > 2 && ""}`} // ép 2 thẻ cuối vào cột giữa
+            style={{ animationDelay: `${idx * 300}ms` }}
+          >
+            <Card className="bg-white shadow-xl rounded-sm hover:shadow-2xl transition-all">
+              <LtrOpacityTightWrapper
+                idx={idx}
+                style={{ animationDelay: `${idx * 300 + 700}ms` }}
+                className={`${idx >= 3 ? "" : ""}  left-[-10px] opacity-0`}
+              >
+                <CardContent className="p-6 text-center">
+                  <div className="flex justify-center mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.desc}</p>
+                </CardContent>
+              </LtrOpacityTightWrapper>
+            </Card>
+          </CardAnimationWrapper>
+        ))}
+      </div>
+
+      {/* <div className="max-w-[1200px] hidden lg:block mx-auto  -translate-y-1/4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto px-4">
           {services.slice(0, 3).map((service, idx) => (
-            <Card key={idx} className="bg-white shadow-xl rounded-sm hover:shadow-2xl transition-all">
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
-              </CardContent>
-            </Card>
+            <CardAnimationWrapper className="opacity-0 overflow-hidden" key={idx}>
+              <Card className="bg-white  shadow-xl rounded-sm hover:shadow-2xl transition-all">
+                <LtrOpacityTightWrapper className="delay-500 left-[-10px] opacity-0">
+                  <CardContent className="p-6 text-center">
+                    <div className="flex justify-center mb-4">{service.icon}</div>
+                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-gray-600 text-sm">{service.desc}</p>
+                  </CardContent>
+                </LtrOpacityTightWrapper>
+              </Card>
+            </CardAnimationWrapper>
           ))}
         </div>
 
-        {/* Hàng 2: 2 services, căn giữa */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center max-w-3xl mx-auto px-4">
           {services.slice(3).map((service, idx) => (
-            <Card key={idx} className="bg-white shadow-xl rounded-sm hover:shadow-2xl transition-all">
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
-              </CardContent>
-            </Card>
+            <CardAnimationWrapper className="opacity-0 delay-1000" key={idx}>
+              <Card key={idx} className="bg-white shadow-xl rounded-sm hover:shadow-2xl transition-all">
+                <LtrOpacityTightWrapper className="delay left-[-10px] opacity-0">
+                  <CardContent className="p-6 text-center">
+                    <div className="flex justify-center mb-4">{service.icon}</div>
+                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-gray-600 text-sm">{service.desc}</p>
+                  </CardContent>
+                </LtrOpacityTightWrapper>
+              </Card>
+            </CardAnimationWrapper>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-[1200px] mx-auto lg:hidden  -translate-y-1/6">
         {/* Hàng 1: 3 services */}
@@ -111,6 +147,7 @@ function HomeClient() {
 
       <div className="relative -translate-y-[120px] lg:-translate-y-0">
         <MissionSection />
+        <MyClient />
         <ServicesSection />
         <MyPartner />
         <ProjectCard />

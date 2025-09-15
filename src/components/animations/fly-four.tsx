@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function Hetbietdatten1Wrapper({
+export default function FlyFourWrapper({
   children,
   className,
+  animation,
 }: {
-  children: React.ReactNode;
+  animation: string;
   className?: string;
+  children: React.ReactNode;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +17,10 @@ export default function Hetbietdatten1Wrapper({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting); // true khi vào, false khi ra
+        if (entry.isIntersecting) {
+          setIsVisible(true); // chỉ set true 1 lần
+          observer.unobserve(entry.target); // ngừng observe -> animation chỉ chạy 1 lần
+        }
       },
       { threshold: 0.2 }
     );
@@ -25,7 +30,7 @@ export default function Hetbietdatten1Wrapper({
   }, []);
 
   return (
-    <div ref={ref} className={`${className} ${isVisible && "lg:animate-hetbietdatten1 lg:relative"}`}>
+    <div ref={ref} className={`${className} ${isVisible && "relative "} ${animation}`}>
       {children}
     </div>
   );

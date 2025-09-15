@@ -2,7 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function RtlOpacityTightWrapper({ children }: { children: React.ReactNode }) {
+export default function RtlOpacityTightWrapper({
+  children,
+  className,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +25,7 @@ export default function RtlOpacityTightWrapper({ children }: { children: React.R
   }, []);
 
   return (
-    <div ref={ref} className={`${isVisible && "relative animate-rtl-opacity-tight"}`}>
+    <div ref={ref} className={`${className} ${isVisible && "relative animate-rtl-opacity-tight"}`}>
       {children}
     </div>
   );

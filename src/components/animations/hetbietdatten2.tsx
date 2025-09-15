@@ -19,7 +19,7 @@ export default function Hetbietdatten2Wrapper({ children }: { children: React.Re
   }, []);
 
   return (
-    <div ref={ref} className={`${isVisible && "animate-hetbietdatten2 relative"}`}>
+    <div ref={ref} className={`${isVisible && "lg:animate-hetbietdatten2 relative"}`}>
       {children}
     </div>
   );
