@@ -10,7 +10,7 @@ function MissionSection() {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 w-full">
           {/* Cột hình bên trái */}
-          <Hetbietdatten1Wrapper className="h-full">
+          <Hetbietdatten1Wrapper className="h-full  lg:-left-[20px]">
             <div className="h-full">
               <Image
                 width={600}
@@ -24,7 +24,7 @@ function MissionSection() {
         </div>
         {/* Cột nền xanh bên phải */}
         <div className="md:w-1/2 w-full">
-          <Hetbietdatten2Wrapper>
+          <Hetbietdatten2Wrapper className="lg:-right-[20px]">
             <div className=" bg-[#084ea4]  text-white flex items-center">
               <div className="p-8 lg:p-10 md:p-16">
                 <p className="uppercase text-sm tracking-wide mb-3 font-semibold">Who We Are</p>

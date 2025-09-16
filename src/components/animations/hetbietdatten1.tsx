@@ -25,7 +25,7 @@ export default function Hetbietdatten1Wrapper({
   }, []);
 
   return (
-    <div ref={ref} className={`${className} ${isVisible && "lg:animate-hetbietdatten1 lg:relative"}`}>
+    <div ref={ref} className={`${className} lg:relative ${isVisible && "lg:animate-hetbietdatten1"}`}>
       {children}
     </div>
   );

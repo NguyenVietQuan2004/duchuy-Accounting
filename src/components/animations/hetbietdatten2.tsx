@@ -2,7 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function Hetbietdatten2Wrapper({ children }: { children: React.ReactNode }) {
+export default function Hetbietdatten2Wrapper({
+  children,
+  className,
+}: {
+  className: string;
+  children: React.ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +25,7 @@ export default function Hetbietdatten2Wrapper({ children }: { children: React.Re
   }, []);
 
   return (
-    <div ref={ref} className={`${isVisible && "lg:animate-hetbietdatten2 relative"}`}>
+    <div ref={ref} className={`${className} relative ${isVisible && "lg:animate-hetbietdatten2 "}`}>
       {children}
     </div>
   );

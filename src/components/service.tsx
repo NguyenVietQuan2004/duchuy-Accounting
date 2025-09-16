@@ -153,6 +153,8 @@ function Service() {
               threshold={0.2}
               key={idx}
               className={`
+                col-span- 12
+                md:col-span-1
                 ${
                   idx >= 2
                     ? "lg:col-span-6"
@@ -163,8 +165,8 @@ function Service() {
                 
                 
                 h-full
-                opacity-0 overflow-hidden col-span-4 
-                    ${idx == 3 ? "col-start-3" : ""} ${idx > 2 && ""}`} // ép 2 thẻ cuối vào cột giữa
+                opacity-0 overflow-hidden  
+                    ${idx == 3 ? "lg:col-start-0" : ""} ${idx > 2 && ""}`} // ép 2 thẻ cuối vào cột giữa
               style={{ animationDelay: `${idx * 300}ms` }}
             >
               <Card
@@ -179,7 +181,7 @@ function Service() {
                 >
                   <CardContent className="p-6 flex flex-col items-center gap-4 border-none">
                     <service.icon />
-                    <h3 className="text-xl font-bold">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-center lg:text-start">{service.title}</h3>
                     <ul className="space-y-1 text-sm">
                       {service.items.map((item, i) => (
                         <li key={i} className="text-gray-700 group-hover:text-white leading-snug">
