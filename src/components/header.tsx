@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
@@ -34,21 +34,23 @@ export default function Header() {
       <div className="border-b border-[#2760A5]">
         <div className="flex max-w-[1200px] px-2 mx-auto h-[70px] lg:h-[80px] items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 md:space-x-4">
-            <div className="w-[50px] md:w-[50px] lg:w-[60px] flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 md:space-x-8">
+            <div className="w-[70px] md:w-[80px] lg:w-[100px] flex items-center justify-center">
               <Image alt="logo" width={200} height={200} src={logoWhite} className="w-full h-full object-contain" />
             </div>
             {/* <div>NTN Professional Services Pty Ltd</div> */}
-            <span className="font-bold flex flex-col text-white">
-              <span className=" text-[20px] md:text-[24px] leading-5">NTN Professional Services</span>
-              <span className="text-[12px] leading-3 tracking-[4px]">Pty Ltd</span>
+            <span className="font-semibold flex flex-col text-white">
+              <span className=" text-sm md:text-base lg:text-lg  leading-5">NTN Professional Services Pty Ltd</span>
+              {/* <span className="text-[12px] leading-3 tracking-[4px]">Pty Ltd</span> */}
             </span>
           </Link>
 
           {/* Hotline Desktop */}
           <div className="hidden lg:flex items-center text-white text-sm space-x-2">
             <span className="opacity-70">Hotline:</span>
-            <Phone size={16} className="text-white" />
+            {/* <Phone size={16} className="text-white" /> */}
+            <Mail className="min-w-6 min-h-6 text-white" />
+
             <span className="font-bold">info@ntnps.com.au</span>
           </div>
         </div>
@@ -72,8 +74,8 @@ export default function Header() {
                 <Image alt="menu" src={imgMenu} width={30} height={30} className="brightness-[1000%]" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-white w-[250px]">
-              <SheetHeader>
+            <SheetContent side="right" className="bg-white w-[280px]">
+              <SheetHeader className="border-b">
                 <SheetTitle className="text-lg font-bold text-[#003978]">Menu</SheetTitle>
               </SheetHeader>
 
@@ -100,7 +102,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center justify-start h-[60px] space-x-20 py-3">
+        <ul className="hidden lg:flex items-center lg:justify-center xl:justify-start h-[60px] space-x-20 py-3">
           {menu.map((item) => (
             <li key={item.name}>
               <Link

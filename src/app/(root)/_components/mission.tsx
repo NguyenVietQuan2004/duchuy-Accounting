@@ -28,7 +28,7 @@ function MissionSection() {
         <div className="md:w-1/2 w-full">
           {/* <Hetbietdatten2Wrapper className="lg:-right-[20px]"> */}
           <div className="bg-[#084ea4] text-white flex items-center h-full">
-            <div className="p-8 lg:p-10 md:p-16">
+            <div className="p-4  lg:p-10 md:p-16">
               <p className="uppercase text-sm tracking-wide mb-3 font-semibold">Who We Are</p>
               <h2 className="text-[26px] md:text-4xl font-bold mb-6">Our Mission & Values</h2>
               <p className="leading-relaxed text-sm md:text-base mb-6 lg:text-justify">

@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Briefcase, Building2, Layers, Network } from "lucide-react";
+import Image from "next/image";
 export default function MyClient() {
   const items = [
     {
@@ -30,14 +31,16 @@ export default function MyClient() {
       desc: "Sole traders, partnerships, companies, trusts, and not-for-profits",
     },
   ];
-
+  const logoBlue = "/images/logoblue.png";
   return (
     <section className="max-w-5xl mx-auto px-4 py-4 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           {" "}
-          <h2 className="text-cyan-600 text-sm font-medium uppercase mb-2">NTNPS</h2>
-          <h3 className="text-3xl font-bold mb-8">Our Clients</h3>
+          <h2 className="w-[100px]">
+            <Image alt="" width={200} height={200} src={logoBlue} className="w-full h-full object-cover" />
+          </h2>
+          <h3 className="text-3xl font-bold mb-8 mt-2">Our Clients</h3>
         </div>
         {items.map((item, i) => (
           <Card key={i} className="rounded-lg shadow-sm hover:shadow-md transition">

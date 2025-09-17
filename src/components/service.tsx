@@ -137,7 +137,7 @@ export const services = [
 
 function Service() {
   return (
-    <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-12 pb-8 lg:pb-20">
+    <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-8 pb-8 lg:pb-20">
       <div className="max-w-[1300px] mx-auto px-0 lg:px-40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {services.map((service, idx) => (

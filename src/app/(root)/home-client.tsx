@@ -25,16 +25,16 @@ const services = [
     title: "Industry Expertise",
     desc: "Deep understanding of industry-specific needs for tailored solutions.",
   },
-  {
-    icon: <DollarSign className="w-8 h-8 text-orange-500" />,
-    title: "Transparent Pricing",
-    desc: "Clear pricing with no hidden fees, helping you stay on budget.",
-  },
-  {
-    icon: <Lock className="w-8 h-8 text-orange-500" />,
-    title: "Secure Portal",
-    desc: "Safe online platform for sharing and managing your documents.",
-  },
+  // {
+  //   icon: <DollarSign className="w-8 h-8 text-orange-500" />,
+  //   title: "Transparent Pricing",
+  //   desc: "Clear pricing with no hidden fees, helping you stay on budget.",
+  // },
+  // {
+  //   icon: <Lock className="w-8 h-8 text-orange-500" />,
+  //   title: "Secure Portal",
+  //   desc: "Safe online platform for sharing and managing your documents.",
+  // },
   {
     icon: <Shield className="w-8 h-8 text-orange-500" />,
     title: "Dedicated Support",
@@ -43,7 +43,7 @@ const services = [
 ];
 
 function HomeClient() {
-  const img = "/images/bg2.jpg";
+  const img = "/images/imgbackgroundhome.jpg";
 
   return (
     <div className="max-w-screen overflow-hidden">
@@ -51,7 +51,7 @@ function HomeClient() {
       <div className="relative h-[700px] mt-[140px]">
         {img && (
           <div
-            className="absolute inset-0 bg-[position:50%_50%] bg-cover bg-no-repeat transition-opacity duration-500"
+            className="absolute inset-0 bg-[position:50%_70%] bg-cover bg-no-repeat transition-opacity duration-500"
             style={{
               backgroundImage: `url(${img})`,
               filter: "brightness(100%)",
@@ -69,7 +69,7 @@ function HomeClient() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] hidden lg:grid grid-cols-12 gap-10 mx-auto -translate-y-1/4">
+      <div className="max-w-[1200px] hidden px-4 lg:grid grid-cols-12 gap-10 mx-auto -translate-y-1/4">
         {services.map((service, idx) => (
           <CardAnimationWrapper
             idx={idx}
@@ -144,15 +144,15 @@ function HomeClient() {
         </div>
       </div>
 
-      <div className="relative -translate-y-[120px] lg:-translate-y-0">
+      <div className="relative -translate-y-[80px] lg:-translate-y-0">
         <MissionSection />
         <MyClient />
         <ServicesSection />
-        <MyPartner />
-        <ProjectCard />
-        <RequestCallback />
-        <BlogSection />
-        <ClientFeedback />
+        {/* <MyPartner /> */}
+        {/* <ProjectCard /> */}
+        {/* <RequestCallback /> */}
+        {/* <BlogSection /> */}
+        {/* <ClientFeedback /> */}
         <MyPartnerLogo />
       </div>
     </div>

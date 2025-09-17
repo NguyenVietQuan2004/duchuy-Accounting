@@ -15,7 +15,7 @@ function MyPartnerLogo() {
   );
 
   return (
-    <div className="pb-16 px-4 lg:px-0 bg-[#f3f9ff] ">
+    <div className="pb-16 px-4 lg:px-0 bg-blue-50 ">
       <div className="max-w-[1140px] mx-auto">
         <div className="text-sm font-bold text-gray-500 mb-6">Our clients include:</div>
 
