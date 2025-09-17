@@ -43,7 +43,7 @@ const services = [
 ];
 
 function HomeClient() {
-  const img = "https://w.ladicdn.com/s1440x620/57b167c9ca57d39c18a1c57c/op6ZCVTO20231115065153.jpeg";
+  const img = "/images/bg2.jpg";
 
   return (
     <div className="max-w-screen overflow-hidden">
@@ -51,7 +51,7 @@ function HomeClient() {
       <div className="relative h-[700px] mt-[140px]">
         {img && (
           <div
-            className="absolute inset-0 bg-[position:50%_0%] bg-cover bg-no-repeat transition-opacity duration-500"
+            className="absolute inset-0 bg-[position:50%_50%] bg-cover bg-no-repeat transition-opacity duration-500"
             style={{
               backgroundImage: `url(${img})`,
               filter: "brightness(100%)",

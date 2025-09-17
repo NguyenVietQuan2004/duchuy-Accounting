@@ -13,7 +13,13 @@ function MissionSection() {
         <div className="md:w-1/2 w-full">
           {/* <Hetbietdatten1Wrapper className="h-full lg:-left-[20px]"> */}
           <div className="h-full relative ">
-            <Image fill src={img} alt="Handshake" className="w-full h-full object-cover" />
+            <Image
+              src={img}
+              alt="Handshake"
+              width={500}
+              height={500}
+              className="w-full h-full lg:absolute inset-0 object-cover"
+            />
           </div>
           {/* </Hetbietdatten1Wrapper> */}
         </div>

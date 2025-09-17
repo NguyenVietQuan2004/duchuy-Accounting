@@ -8,12 +8,12 @@ import Image from "next/image";
 export default function Footer() {
   const logoblack = "/images/logoblue.png";
   return (
-    <footer className="bg-white text-[#003978] py-10 lg:pb-20 border-t">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
+    <footer className="bg-white text-[#003978] pt-10 border-t">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 pb-6 md:grid-cols-5 gap-8">
         {/* Column 1 Logo */}
         <div className="space-y-4 col-span-1">
           <div className="flex items-center space-x-0">
-            <div className="w-[50px] md:w-[70px]  lg:w-[100px]   flex items-center justify-center mr-1">
+            <div className="w-[70px] md:w-[70px]  lg:w-[100px]   flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} className="w-full h-full object-contain" />
             </div>
             {/* <span className="font-bold flex flex-col text-[#003978]">
@@ -125,6 +125,8 @@ export default function Footer() {
           </form>
         </div> */}
       </div>
+
+      <div className="text-sm border-t p-6 pt-2 pb-5 text-gray-400">NTN Professional Services Pty Ltd</div>
     </footer>
   );
 }

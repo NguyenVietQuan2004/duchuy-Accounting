@@ -136,13 +136,6 @@ export const services = [
 ];
 
 function Service() {
-  const animations = [
-    "animate-in-top-left",
-    "animate-in-top-right",
-    "animate-in-bottom-left",
-    "animate-in-bottom-right",
-  ];
-
   return (
     <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-12 pb-8 lg:pb-20">
       <div className="max-w-[1300px] mx-auto px-0 lg:px-40">

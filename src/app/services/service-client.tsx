@@ -21,15 +21,15 @@ function ServiceClient() {
           />
         )}
         <div className="relative max-w-[1200px] animate-rtl-opacity py-[120px] h-full pt-[160px] lg:pt-[200px] mx-auto px-4">
-          <div className=" max-w-[540px]">
+          <div className=" max-w-[540px] text-[#003978]">
             <div className="text-[18px]">Learn About Our Services</div>
             <div className="text-[48px] font-bold">How Can We Help You?</div>
           </div>
         </div>
       </div>
       <Service />
-      <HeroWithStats />
-      <ContactFormSection />
+      {/* <HeroWithStats /> */}
+      {/* <ContactFormSection /> */}
     </div>
   );
 }

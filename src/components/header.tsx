@@ -34,13 +34,13 @@ export default function Header() {
       <div className="border-b border-[#2760A5]">
         <div className="flex max-w-[1200px] px-2 mx-auto h-[70px] lg:h-[80px] items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-[40px] md:w-[50px] lg:w-[60px] flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 md:space-x-4">
+            <div className="w-[50px] md:w-[50px] lg:w-[60px] flex items-center justify-center">
               <Image alt="logo" width={200} height={200} src={logoWhite} className="w-full h-full object-contain" />
             </div>
             {/* <div>NTN Professional Services Pty Ltd</div> */}
             <span className="font-bold flex flex-col text-white">
-              <span className="text-[24px] leading-5">NTN Professional Services</span>
+              <span className=" text-[20px] md:text-[24px] leading-5">NTN Professional Services</span>
               <span className="text-[12px] leading-3 tracking-[4px]">Pty Ltd</span>
             </span>
           </Link>
@@ -90,6 +90,10 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
+              </div>
+
+              <div className="p-6 text-sm font-semibold text-gray-300 mt-auto text-center">
+                NTN Professional Services Pty Ltd
               </div>
             </SheetContent>
           </Sheet>
