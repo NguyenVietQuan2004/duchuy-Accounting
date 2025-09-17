@@ -27,58 +27,35 @@ function ContactClient() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8 lg:pb-20 flex flex-col gap-6">
+      <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8  lg:pb-36 flex flex-col gap-6">
         <FadeInWrapper className="opacity-0">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Contact Info */}
-            <div className="flex flex-col gap-8 h-full">
-              <div className="h-full">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.056640960699!2d106.73078149999999!3d10.7301149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175254fc81ab34d%3A0xc416f38314923c3a!2sBMB%20Garage!5e0!3m2!1svi!2s!4v1750091279481!5m2!1svi!2s"
-                  className="w-full h-full mt-2"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-
-            {/* Contact Form */}
             <div className="">
-              <h2 className="text-[#124D9B] text-3xl lg:text-4xl mt-4 lg:mt-0 font-bold">
-                Questions / Inquiries:
-                <br />
-              </h2>
-              <div className=" text-sm my-4"></div>
-              <ContactForm />
-            </div>
-          </div>
-        </FadeInWrapper>
+              {/* Heading */}
+              <h2 className="text-[36px] font-bold mb-2">Interested in Collaborating with Us</h2>
+              <p className="text-sm font-normal mb-6">
+                Priority for in-person consultation in Sydney: our partner (website link) provides face-to-face services
+                in the Sydney area.
+              </p>
 
-        <div className="mt-4 lg:mt-20 px-2 lg:px-10">
-          {/* Heading */}
-          <h2 className="text-[36px] font-bold mb-2">Interested in Collaborating with Us</h2>
-          <p className="text-sm font-normal mb-6">
-            Priority for in-person consultation in Sydney: our partner (website link) provides face-to-face services in
-            the Sydney area.
-          </p>
-
-          {/* Contact Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {/* Phone */}
-            <div className="flex items-center space-x-3">
+              {/* Contact Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {/* Phone */}
+                {/* <div className="flex items-center space-x-3">
               <Phone className="min-w-6 min-h-6 text-black" />
               <span className="font-bold text-lg">097 2220777</span>
-            </div>
+            </div> */}
 
-            {/* Email */}
-            <div className="flex items-center space-x-3">
-              <Mail className="min-w-6 min-h-6 text-black" />
-              <a href="mailto:Support@hexblebusiness.vn" className="font-bold text-lg hover:text-blue-600">
-                Support@ntnps.vn
-              </a>
-            </div>
+                {/* Email */}
+                <div className="flex items-center space-x-3">
+                  <Mail className="min-w-6 min-h-6 text-black" />
+                  <a href="mailto:Support@hexblebusiness.vn" className="font-bold text-lg hover:text-blue-600">
+                    info@ntnps.com.au
+                  </a>
+                </div>
 
-            {/* Website */}
-            <div className="flex items-center space-x-3">
+                {/* Website */}
+                {/* <div className="flex items-center space-x-3">
               <Globe className="min-w-6 min-h-6 text-black" />
               <a
                 href="https://hexblebusiness.vn"
@@ -88,15 +65,27 @@ function ContactClient() {
               >
                 https://ntnps.vn
               </a>
-            </div>
+            </div> */}
 
-            {/* Address */}
-            <div className="flex items-center space-x-3">
+                {/* Address */}
+                {/* <div className="flex items-center space-x-3">
               <MapPin className="min-w-6 min-h-6 text-black" />
               <span className="font-bold text-lg">Address: Level 24, 300 Barangaroo Avenue, Barangaroo NSW 2000</span>
+            </div> */}
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="">
+              <h2 className="text-[#124D9B] text-3xl lg:text-4xl mt-4 lg:mt-0 font-bold">
+                Book a consultation
+                <br />
+              </h2>
+              <div className=" text-sm my-4"></div>
+              <ContactForm />
             </div>
           </div>
-        </div>
+        </FadeInWrapper>
       </div>
     </div>
   );

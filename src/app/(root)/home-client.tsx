@@ -11,7 +11,6 @@ import BlogSection from "./_components/blogs";
 import ClientFeedback from "./_components/client-feedback";
 import MyPartnerLogo from "./_components/my-partner-logo";
 import MyClient from "./_components/my-client";
-import FadeInWrapper from "@/components/animations/fade-in-wrapper";
 import CardAnimationWrapper from "@/components/animations/card-animation";
 import LtrOpacityTightWrapper from "@/components/animations/ltr-opacity-tight-wrapper";
 

@@ -5,14 +5,15 @@ import ContactFormSection from "./_components/contact-form";
 import Service from "@/components/service";
 
 function ServiceClient() {
-  const img = "https://w.ladicdn.com/s1440x620/57b167c9ca57d39c18a1c57c/op6ZCVTO20231115065153.jpeg";
+  const img = "/images/imgbackgroundhome.jpg";
+
   return (
     <div className="max-w-screen overflow-hidden">
       {/* Banner */}
       <div className="relative h-[700px] mt-[140px] max-w-screen overflow-hidden">
         {img && (
           <div
-            className="absolute inset-0 bg-[position:50%_0%] bg-cover bg-no-repeat transition-opacity duration-500"
+            className="absolute inset-0 bg-[position:50%_70%] bg-cover bg-no-repeat transition-opacity duration-500"
             style={{
               backgroundImage: `url(${img})`,
               filter: "brightness(100%)",

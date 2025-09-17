@@ -28,7 +28,7 @@ export default function ContactFormSection() {
         <div className="flex flex-col justify-start col-span-2">
           <RtlOpacityTightWrapper>
             <h2 className="text-3xl leading-10 text-center md:text-4xl lg:leading-[60px] font-bold mb-4">
-              Sign Up for a Consultation Now to Get the Best Solution!
+              Book for a Consultation Now to Get the Best Solution!
             </h2>
           </RtlOpacityTightWrapper>
           <p className="text-gray-600">{/* optional small description here */}</p>

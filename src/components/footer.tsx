@@ -8,22 +8,22 @@ import Image from "next/image";
 export default function Footer() {
   const logoblack = "/images/logoblue.png";
   return (
-    <footer className="bg-white text-[#003978] py-10 border-t">
+    <footer className="bg-white text-[#003978] py-10 lg:pb-20 border-t">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
         {/* Column 1 Logo */}
         <div className="space-y-4 col-span-1">
           <div className="flex items-center space-x-0">
-            <div className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]  flex items-center justify-center mr-1">
-              <Image alt="" width={200} height={200} src={logoblack} />
+            <div className="w-[50px] md:w-[70px]  lg:w-[100px]   flex items-center justify-center mr-1">
+              <Image alt="" width={200} height={200} src={logoblack} className="w-full h-full object-contain" />
             </div>
             {/* <span className="font-bold flex flex-col text-[#003978]">
               <span className="text-[22px] leading-5"></span>
               <span className="text-[12px] leading-3 tracking-[4px]">Business</span>
             </span> */}
           </div>
-          <p className="text-sm text-gray-600">Smart financial strategy creating value</p>
+          {/* <p className="text-sm text-gray-600">Smart financial strategy creating value</p> */}
           {/* Social */}
-          <div className="flex space-x-4 pt-2">
+          {/* <div className="flex space-x-4 pt-2">
             <Link href="#" className="text-[#003978] hover:text-orange-500">
               <Facebook size={20} />
             </Link>
@@ -31,12 +31,12 @@ export default function Footer() {
               <Instagram size={20} />
             </Link>
             <Link href="#" className="text-[#003978] hover:text-orange-500">
-              <Music2 size={20} /> {/* TikTok icon placeholder */}
+              <Music2 size={20} /> 
             </Link>
             <Link href="#" className="text-[#003978] hover:text-orange-500">
-              <MessageCircle size={20} /> {/* Messenger */}
+              <MessageCircle size={20} />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Column 2 Our Company */}
@@ -53,11 +53,11 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/pricing" className="text-sm text-black font-normal">
                 Pricing
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -65,11 +65,11 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-3 text-[16px] text-black">Features</h3>
           <ul className="space-y-2 text-gray-600 text-sm">
-            <li>
+            {/* <li>
               <Link href="#" className="text-sm text-black font-normal">
                 Affiliate Marketing
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="#" className="text-sm text-black font-normal">
                 Customer Care
@@ -87,26 +87,26 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-3 text-[16px] text-black">Need Help?</h3>
           <ul className="space-y-2 text-gray-600 text-sm">
-            <li>
+            {/* <li>
               <Link href="#" className="text-sm text-black font-normal">
                 Privacy Policy
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="#" className="text-sm text-black font-normal">
                 Terms of Service
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="#" className="text-sm text-black font-normal">
                 Learn More
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
         {/* Column 5 Subscribe */}
-        <div className="col-span-2 lg:col-span-1">
+        {/* <div className="col-span-2 lg:col-span-1">
           <h3 className="font-bold mb-3 text-[16px] text-black">Subscribe</h3>
           <form className="space-y-3">
             <input
@@ -123,7 +123,7 @@ export default function Footer() {
               SUBSCRIBE
             </Button>
           </form>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

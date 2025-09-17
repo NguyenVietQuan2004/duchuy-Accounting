@@ -11,15 +11,15 @@ export default function ProjectCard() {
         <div className="grid grid-cols-1 md:grid-cols-9 gap-6 items-center">
           {/* Logo + Date */}
           <div className="flex flex-col items-start lg:items-center gap-4 col-span-1 md:col-span-3">
-            <div className="flex items-center space-x-0">
-              <div className="w-[60px] md:w-[70px] lg:w-[90px] h-[60px] md:h-[70px] lg:h-[90px] flex items-center justify-center">
+            <div className="flex space-x-0">
+              <div className="w-[60px] md:w-[70px] lg:w-[100px] h-[60px] md:h-[70px] flex items-center justify-center">
                 {/* <Image
                   alt=""
                   width={200}
                   height={200}
                   src={"https://w.ladicdn.com/s400x400/57b167c9ca57d39c18a1c57c/business-011-20231106081214-8ssds.png"}
                 /> */}
-                <Image alt="" width={200} height={200} src={logoWhite} />
+                <Image alt="" width={200} height={200} src={logoWhite} className="w-full h-full object-contain" />
               </div>
               {/* <span className="font-bold flex flex-col text-[#003978]">
                 <span className="text-4xl leading-[32px]">ntnps</span>
