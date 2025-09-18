@@ -85,7 +85,7 @@ export default function Footer() {
         </div> */}
       </div>
 
-      <div className="text-sm border-t p-6 pt-2 pb-5 text-gray-400">Disclainmer</div>
+      <div className="text-sm border-t p-6 pt-1 pb-4 text-gray-400">Disclainmer</div>
     </footer>
   );
 }
