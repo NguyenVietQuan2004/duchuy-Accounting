@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-white text-[#003978] pt-10 border-t">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 pb-6 md:grid-cols-5 gap-8">
         {/* Column 1 Logo */}
-        <div className="space-y-4 col-span-1">
+        <div className="space-y-4 col-span-2 md:col-span-1">
           <div className="flex items-center space-x-0">
             <div className="w-[70px] md:w-[70px]  lg:w-[100px]   flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} className="w-full h-full object-contain" />
@@ -41,73 +41,32 @@ export default function Footer() {
 
         {/* Column 2 Our Company */}
         <div>
-          <h3 className="font-bold mb-3 text-[16px] text-black">Our Company</h3>
-          <ul className="space-y-2 text-gray-600 text-sm">
-            <li>
-              <Link href="/about" className="text-sm text-black font-normal">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-sm text-black font-normal">
-                Contact
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="/pricing" className="text-sm text-black font-normal">
-                Pricing
-              </Link>
-            </li> */}
-          </ul>
+          <Link href={"/"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
+            About us
+          </Link>
         </div>
 
         {/* Column 3 Features */}
         <div>
-          <h3 className="font-bold mb-3 text-[16px] text-black">Features</h3>
-          <ul className="space-y-2 text-gray-600 text-sm">
-            {/* <li>
-              <Link href="#" className="text-sm text-black font-normal">
-                Affiliate Marketing
-              </Link>
-            </li> */}
-            <li>
-              <Link href="#" className="text-sm text-black font-normal">
-                Customer Care
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="text-sm text-black font-normal">
-                Services
-              </Link>
-            </li>
-          </ul>
+          <Link href={"/services"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
+            Customer services
+          </Link>
         </div>
 
         {/* Column 4 Help */}
         <div>
-          <h3 className="font-bold mb-3 text-[16px] text-black">Need Help?</h3>
-          <ul className="space-y-2 text-gray-600 text-sm">
-            {/* <li>
-              <Link href="#" className="text-sm text-black font-normal">
-                Privacy Policy
-              </Link>
-            </li> */}
-            <li>
-              <Link href="#" className="text-sm text-black font-normal">
-                Terms of Service
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="#" className="text-sm text-black font-normal">
-                Learn More
-              </Link>
-            </li> */}
-          </ul>
+          <Link href={"/contact"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
+            Contact
+          </Link>
         </div>
-
+        <div>
+          <Link href={"/services"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
+            Terms of service
+          </Link>
+        </div>
         {/* Column 5 Subscribe */}
         {/* <div className="col-span-2 lg:col-span-1">
-          <h3 className="font-bold mb-3 text-[16px] text-black">Subscribe</h3>
+          <h3 className="font-bold mb-3 text-[16px] text-[#084ea4]">Subscribe</h3>
           <form className="space-y-3">
             <input
               type="text"
