@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Column 2 Our Company */}
         <div>
-          <Link href={"/"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
+          <Link href={"/about-us"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
             About us
           </Link>
         </div>
@@ -85,7 +85,7 @@ export default function Footer() {
         </div> */}
       </div>
 
-      <div className="text-sm border-t p-6 pt-2 pb-5 text-gray-400">NTN Professional Services Pty Ltd</div>
+      <div className="text-sm border-t p-6 pt-2 pb-5 text-gray-400">Disclainmer</div>
     </footer>
   );
 }
