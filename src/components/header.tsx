@@ -51,7 +51,7 @@ export default function Header() {
 
           {/* Hotline Desktop */}
           <div className="hidden lg:flex items-center text-white text-sm space-x-2">
-            <span className="opacity-70">Hotline:</span>
+            {/* <span className="opacity-70">Hotline:</span> */}
             {/* <Phone size={16} className="text-white" /> */}
             <Mail className="min-w-6 min-h-6 text-white" />
 
@@ -66,7 +66,7 @@ export default function Header() {
         <div className="flex lg:hidden items-center justify-between px-4 h-[70px] space-x-20 py-3">
           <div className="items-center text-white text-sm space-x-2">
             <span className="opacity-70">
-              Hotline: <br />
+              <br />
             </span>
             <span className="font-bold ml-1">info@ntnps.com.au</span>
           </div>

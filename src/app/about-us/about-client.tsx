@@ -71,17 +71,17 @@ function AboutClient() {
           <div className="flex items-center gap-1 font-semibold">
             Disclaimer <Copyright width={14} />
           </div>
-          <p className="text-justify">
+          <p className="text-justify text-[10px]">
             All materials on this site are presented for general knowledge purposes and should not be considered as
             professional counsel. Please contact our consultants to receive specific professional advice which is
             tailored to your unique situation or circumstance.
           </p>
-          <p className="text-justify">
+          <p className="text-justify text-[10px]">
             We disclaim all liability and responsibility (direct or indirect or incidental or consequential or special
             damages) arising from or in connection with the use, inability to use, or reliance on any information
             provided.
           </p>
-          <p className="text-justify">
+          <p className="text-justify text-[10px]">
             We refer to NTN Professional Services Pty Ltd. Liability limited under a scheme approved under Professional
             Standards Legislation.
           </p>
