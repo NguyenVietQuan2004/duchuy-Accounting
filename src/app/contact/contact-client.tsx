@@ -42,8 +42,8 @@ function ContactClient() {
               {/* Heading */}
               {/* <h2 className="text-[36px] font-bold mb-2">Interested in Collaborating with Us</h2> */}
               <p className="text-lg text-zinc-800 font-bold  mb-6">
-                Priority for in-person consultation in Sydney: our partner (website link) provides face-to-face services
-                in the Sydney area.
+                Refer in-person consultation in Sydney: our partner (website link) provides face-to-face services in the
+                Sydney area.
               </p>
 
               {/* Contact Grid */}

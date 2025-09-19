@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import MissionSection from "./_components/mission";
 import ServicesSection from "./_components/service";
 import ProjectCard from "./_components/project-card";
-import { Briefcase, DollarSign, Shield, Lock, Users } from "lucide-react";
+import { Briefcase, DollarSign, Shield, Lock, Users, Copyright } from "lucide-react";
 import MyPartner from "./_components/my-partner";
 import RequestCallback from "./_components/request-callback";
 import BlogSection from "./_components/blogs";
@@ -153,7 +153,28 @@ function HomeClient() {
         {/* <RequestCallback /> */}
         {/* <BlogSection /> */}
         {/* <ClientFeedback /> */}
-        <MyPartnerLogo />
+        <div className="pb-8 px-2 bg-blue-50">
+          <div className=" max-w-[1000px] mx-auto bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-3">
+            <div className="flex items-center text-[12px] gap-1 font-semibold">
+              Disclaimer <Copyright width={14} />
+            </div>
+            <p className="text-justify text-[12px]">
+              All materials on this site are presented for general knowledge purposes and should not be considered as
+              professional counsel. Please contact our consultants to receive specific professional advice which is
+              tailored to your unique situation or circumstance.
+            </p>
+            <p className="text-justify text-[12px]">
+              We disclaim all liability and responsibility (direct or indirect or incidental or consequential or special
+              damages) arising from or in connection with the use, inability to use, or reliance on any information
+              provided.
+            </p>
+            <p className="text-justify text-[12px]">
+              We refer to NTN Professional Services Pty Ltd. Liability limited under a scheme approved under
+              Professional Standards Legislation.
+            </p>
+          </div>
+        </div>
+        {/* <MyPartnerLogo /> */}
       </div>
     </div>
   );

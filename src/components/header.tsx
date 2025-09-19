@@ -14,12 +14,12 @@ const menu = [
     link: "/",
   },
   {
-    name: "Services",
-    link: "/services",
-  },
-  {
     name: "About us",
     link: "/about-us",
+  },
+  {
+    name: "Services",
+    link: "/services",
   },
   {
     name: "Contact",
