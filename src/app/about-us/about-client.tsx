@@ -68,7 +68,7 @@ function AboutClient() {
 
         {/* Disclaimer Section */}
         <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-3">
-          <div className="flex items-center gap-1 font-semibold">
+          <div className="flex items-center text-[10px] gap-1 font-semibold">
             Disclaimer <Copyright width={14} />
           </div>
           <p className="text-justify text-[10px]">
