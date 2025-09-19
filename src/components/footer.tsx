@@ -59,11 +59,7 @@ export default function Footer() {
             Contact
           </Link>
         </div>
-        <div>
-          <Link href={"/services"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
-            Terms of service
-          </Link>
-        </div>
+
         {/* Column 5 Subscribe */}
         {/* <div className="col-span-2 lg:col-span-1">
           <h3 className="font-bold mb-3 text-[16px] text-[#084ea4]">Subscribe</h3>
