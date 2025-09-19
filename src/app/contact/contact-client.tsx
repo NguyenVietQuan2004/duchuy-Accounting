@@ -9,7 +9,7 @@ function ContactClient() {
   return (
     <div>
       {/* Banner */}
-      <div className="relative h-[700px] mt-[140px]">
+      {/* <div className="relative h-[700px] mt-[140px]">
         {img && (
           <div
             className="absolute inset-0 bg-[position:50%_50%] bg-cover  transition-opacity duration-500"
@@ -25,9 +25,9 @@ function ContactClient() {
             <div className="text-[36px] font-bold">With us! For Financial Consulting for your Business</div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="max-w-[1200px] px-4 mx-auto text-[18px] font-light py-8  lg:pb-36 flex flex-col gap-6">
+      <div className="max-w-[1200px] mt-[140px] px-4 mx-auto text-[18px] font-light py-8  lg:pb-36 flex flex-col gap-6">
         <FadeInWrapper className="opacity-0">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -42,8 +42,8 @@ function ContactClient() {
               {/* Heading */}
               {/* <h2 className="text-[36px] font-bold mb-2">Interested in Collaborating with Us</h2> */}
               <p className="text-lg text-zinc-800 font-bold  mb-6">
-                Refer in-person consultation in Sydney: our partner (website link) provides face-to-face services in the
-                Sydney area.
+                Prefer in-person consultation in Sydney: our partner www.mygreatbookkeeper.com.au provides face-to-face
+                services in the Sydney area.
               </p>
 
               {/* Contact Grid */}

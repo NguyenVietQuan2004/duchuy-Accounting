@@ -9,11 +9,11 @@ export default function Footer() {
   const logoblack = "/images/logoblue.png";
   return (
     <footer className="bg-white text-[#003978] pt-10 border-t">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 pb-6 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 pb-12 md:grid-cols-5 gap-8">
         {/* Column 1 Logo */}
         <div className="space-y-4 col-span-2 md:col-span-1">
           <div className="flex items-center space-x-0">
-            <div className="w-[70px] md:w-[70px]  lg:w-[100px]   flex items-center justify-center mr-1">
+            <div className="w-[90px] md:w-[110px]  lg:w-[140px]   flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} className="w-full h-full object-contain" />
             </div>
             {/* <span className="font-bold flex flex-col text-[#003978]">
@@ -81,7 +81,7 @@ export default function Footer() {
         </div> */}
       </div>
 
-      <div className="text-sm border-t p-6 pt-1 pb-4 text-gray-400">Disclainmer</div>
+      {/* <div className="text-sm border-t p-6 pt-1 pb-4 text-gray-400">Disclainmer</div> */}
     </footer>
   );
 }

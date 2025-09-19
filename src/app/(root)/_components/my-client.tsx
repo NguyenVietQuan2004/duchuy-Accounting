@@ -37,9 +37,9 @@ export default function MyClient() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           {" "}
-          <h2 className="w-[100px]">
+          {/* <h2 className="w-[100px]">
             <Image alt="" width={200} height={200} src={logoBlue} className="w-full h-full object-cover" />
-          </h2>
+          </h2> */}
           <h3 className="text-3xl font-bold mb-8 mt-2">Our Clients</h3>
         </div>
         {items.map((item, i) => (

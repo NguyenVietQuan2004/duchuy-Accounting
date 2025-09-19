@@ -22,8 +22,8 @@ function AboutClient() {
         )}
         <div className="relative max-w-[1200px] animate-rtl-opacity py-[120px] h-full pt-[160px] lg:pt-[200px] mx-auto px-4">
           <div className="text-[#003978] max-w-[540px]">
-            <div className="text-[18px]">CONTACT</div>
-            <div className="text-[36px] font-bold">With us! For Financial Consulting for your Business</div>
+            {/* <div className="text-[18px]">CONTACT</div> */}
+            {/* <div className="text-[36px] font-bold">With us! For Financial Consulting for your Business</div> */}
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ function AboutClient() {
       <div className="max-w-[1200px] mx-auto px-4 py-6 md:py-16">
         {/* About Section */}
         <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">About us</h2>
+          {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-900">About us</h2> */}
           <p className="text-gray-700 leading-relaxed text-justify">
             Our accounting firm brings years of experience in accounting, tax, and business advisory to help your
             business succeed.
@@ -69,7 +69,8 @@ function AboutClient() {
         {/* Disclaimer Section */}
         <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-3">
           <div className="flex items-center text-[10px] gap-1 font-semibold">
-            Disclaimer <Copyright width={14} />
+            Disclaimer
+            {/* <Copyright width={14} /> */}
           </div>
           <p className="text-justify text-[10px]">
             All materials on this site are presented for general knowledge purposes and should not be considered as

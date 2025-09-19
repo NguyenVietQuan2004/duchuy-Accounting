@@ -39,7 +39,7 @@ export default function Header() {
         <div className="flex max-w-[1200px] px-2 mx-auto h-[70px] lg:h-[80px] items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 md:space-x-8">
-            <div className="w-[70px] md:w-[80px] lg:w-[100px] flex items-center justify-center">
+            <div className="w-[90px] md:w-[110px] lg:w-[140px] flex items-center justify-center">
               <Image alt="logo" width={200} height={200} src={logoWhite} className="w-full h-full object-contain" />
             </div>
             {/* <div>NTN Professional Services Pty Ltd</div> */}

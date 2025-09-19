@@ -64,7 +64,7 @@ function HomeClient() {
               We understand that no two businesses are alike. Whether you're launching your first venture, managing a
               growing team, or leading a large corporation, your financial needs evolve—and we evolve with you.
             </div>
-            <div className="text-4xl lg:text-[48px] relative animate-ltr-opacity font-bold">How may we assist you?</div>
+            {/* <div className="text-4xl lg:text-[48px] relative animate-ltr-opacity font-bold">How may we assist you?</div> */}
           </div>
         </div>
       </div>
@@ -156,7 +156,8 @@ function HomeClient() {
         <div className="pb-8 px-2 bg-blue-50">
           <div className=" max-w-[1000px] mx-auto bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-3">
             <div className="flex items-center text-[10px] gap-1 font-semibold">
-              Disclaimer <Copyright width={14} />
+              Disclaimer
+              {/* <Copyright width={14} /> */}
             </div>
             <p className="text-justify text-[10px]">
               All materials on this site are presented for general knowledge purposes and should not be considered as
