@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-white text-[#003978] pt-10 border-t">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 pb-12 md:grid-cols-5 gap-8">
         {/* Column 1 Logo */}
-        <div className="space-y-4 col-span-2 md:col-span-1">
+        <div className="space-y-4 col-span-2 md:col-span-1 flex justify-end">
           <div className="flex items-center space-x-0">
             <div className="w-[90px] md:w-[110px]  lg:w-[140px]   flex items-center justify-center mr-1">
               <Image alt="" width={200} height={200} src={logoblack} className="w-full h-full object-contain" />
@@ -40,21 +40,21 @@ export default function Footer() {
         </div>
 
         {/* Column 2 Our Company */}
-        <div>
+        <div className="text-center">
           <Link href={"/about-us"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
             About us
           </Link>
         </div>
 
         {/* Column 3 Features */}
-        <div>
+        <div className="text-center">
           <Link href={"/services"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
             Customer services
           </Link>
         </div>
 
         {/* Column 4 Help */}
-        <div>
+        <div className="text-center">
           <Link href={"/contact"} className="font-bold mb-3 text-[16px] text-[#084ea4]">
             Contact
           </Link>

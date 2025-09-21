@@ -2,19 +2,21 @@
 
 // import { Card, CardContent } from "@/components/ui/card";
 // import { ArrowIcon, BoxIcon, CheckedIcon, MoneyIcon } from "../../public/icons";
+// import FlyFourWrapper from "./animations/fly-four";
+// import CardAnimationWrapper from "./animations/card-animation";
+// import LtrOpacityTightWrapper from "./animations/ltr-opacity-tight-wrapper";
 
-// // data/services.ts
 // export const services = [
-//   {
-//     icon: CheckedIcon,
-//     title: "Accounting",
-//     items: [
-//       "Financial reporting & analysis",
-//       "Budgeting & forecasting",
-//       "Business structuring & advisory",
-//       "Financial services for scaling companies",
-//     ],
-//   },
+//   // {
+//   //   icon: CheckedIcon,
+//   //   title: "Accounting",
+//   //   items: [
+//   //     "Financial reporting & analysis",
+//   //     "Budgeting & forecasting",
+//   //     "Business structuring & advisory",
+//   //     "Financial services for scaling companies",
+//   //   ],
+//   // },
 
 //   {
 //     icon: ArrowIcon,
@@ -46,35 +48,57 @@
 //     ],
 //   },
 // ];
+
 // function Service() {
 //   return (
-//     <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-12  pb-8 lg:pb-20">
+//     <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-8 pb-8 lg:pb-20">
 //       <div className="max-w-[1300px] mx-auto px-0 lg:px-40">
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
 //           {services.map((service, idx) => (
-//             <Card
+//             <CardAnimationWrapper
+//               idx={idx}
+//               threshold={0.2}
 //               key={idx}
-//               className={`group hover:bg-[#2760A5] rounded-sm border-none p-0 hover:text-white transition-all duration-300
-//           ${
-//             idx >= 2
-//               ? "lg:col-span-6" // 2 thẻ dưới to full 6 + 6
-//               : idx === 0
-//               ? "lg:col-span-5 lg:col-start-2" // thẻ 1 nhỏ căn giữa
-//               : "lg:col-span-5 lg:col-start-7" // thẻ 2 nhỏ căn giữa
-//           }`}
+//               className={`
+//                 col-span- 12
+//                 md:col-span-1
+//                 ${
+//                   idx >= 2
+//                     ? "lg:col-span-6"
+//                     : idx === 0
+//                     ? "lg:col-span-5 lg:col-start-2"
+//                     : "lg:col-span-5 lg:col-start-7"
+//                 }
+
+//                 h-full
+//                 opacity-0 overflow-hidden
+//                     ${idx == 3 ? "lg:col-start-0" : ""} ${idx > 2 && ""}`} // ép 2 thẻ cuối vào cột giữa
+//               style={{ animationDelay: `${idx * 300}ms` }}
 //             >
-//               <CardContent className="p-6 flex flex-col items-center gap-4 border-none  ">
-//                 <div className="">{<service.icon />}</div>
-//                 <h3 className="text-xl font-bold">{service.title}</h3>
-//                 <ul className="space-y-1 text-sm">
-//                   {service.items.map((item, i) => (
-//                     <li key={i} className="text-gray-700 group-hover:text-white leading-snug">
-//                       • {item}
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </CardContent>
-//             </Card>
+//               <Card
+//                 key={idx}
+//                 className={`group rounded-sm border-none h-full p-0 transition-all duration-300 hover:bg-[#2760A5] hover:text-white `}
+//               >
+//                 <LtrOpacityTightWrapper
+//                   idx={idx}
+//                   threshold={0.2}
+//                   style={{ animationDelay: `${idx * 300 + 700}ms` }}
+//                   className={`${idx >= 3 ? "" : ""}  left-[-10px] opacity-0`}
+//                 >
+//                   <CardContent className="p-6 flex flex-col items-center gap-4 border-none">
+//                     <service.icon />
+//                     <h3 className="text-xl font-bold text-center lg:text-start">{service.title}</h3>
+//                     <ul className="space-y-1 text-sm">
+//                       {service.items.map((item, i) => (
+//                         <li key={i} className="text-gray-700 group-hover:text-white leading-snug">
+//                           • {item}
+//                         </li>
+//                       ))}
+//                     </ul>
+//                   </CardContent>
+//                 </LtrOpacityTightWrapper>
+//               </Card>
+//             </CardAnimationWrapper>
 //           ))}
 //         </div>
 //       </div>
@@ -93,17 +117,6 @@ import CardAnimationWrapper from "./animations/card-animation";
 import LtrOpacityTightWrapper from "./animations/ltr-opacity-tight-wrapper";
 
 export const services = [
-  {
-    icon: CheckedIcon,
-    title: "Accounting",
-    items: [
-      "Financial reporting & analysis",
-      "Budgeting & forecasting",
-      "Business structuring & advisory",
-      "Financial services for scaling companies",
-    ],
-  },
-
   {
     icon: ArrowIcon,
     title: "Tax Solutions",
@@ -139,43 +152,27 @@ function Service() {
   return (
     <section className="bg-blue-50 px-4 lg:px-0 pt-8 lg:pt-8 pb-8 lg:pb-20">
       <div className="max-w-[1300px] mx-auto px-0 lg:px-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        {/* 3 cột ở màn hình lớn */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
             <CardAnimationWrapper
               idx={idx}
               threshold={0.2}
               key={idx}
-              className={`
-                col-span- 12
-                md:col-span-1
-                ${
-                  idx >= 2
-                    ? "lg:col-span-6"
-                    : idx === 0
-                    ? "lg:col-span-5 lg:col-start-2"
-                    : "lg:col-span-5 lg:col-start-7"
-                }
-                
-                
-                h-full
-                opacity-0 overflow-hidden  
-                    ${idx == 3 ? "lg:col-start-0" : ""} ${idx > 2 && ""}`} // ép 2 thẻ cuối vào cột giữa
-              style={{ animationDelay: `${idx * 300}ms` }}
+              className="h-full opacity-0"
+              style={{ animationDelay: `${idx * 200}ms` }}
             >
-              <Card
-                key={idx}
-                className={`group rounded-sm border-none h-full p-0 transition-all duration-300 hover:bg-[#2760A5] hover:text-white `}
-              >
+              <Card className="group rounded-lg overflow-hidden border-none h-full p-0 transition-all duration-500 hover:scale-[1.02] hover:bg-[#2760A5] hover:text-white shadow-md">
                 <LtrOpacityTightWrapper
                   idx={idx}
                   threshold={0.2}
-                  style={{ animationDelay: `${idx * 300 + 700}ms` }}
-                  className={`${idx >= 3 ? "" : ""}  left-[-10px] opacity-0`}
+                  style={{ animationDelay: `${idx * 200 + 400}ms` }}
+                  className="opacity-0 translate-y-4"
                 >
                   <CardContent className="p-6 flex flex-col items-center gap-4 border-none">
                     <service.icon />
-                    <h3 className="text-xl font-bold text-center lg:text-start">{service.title}</h3>
-                    <ul className="space-y-1 text-sm">
+                    <h3 className="text-xl font-bold text-center">{service.title}</h3>
+                    <ul className="space-y-1 text-sm text-center">
                       {service.items.map((item, i) => (
                         <li key={i} className="text-gray-700 group-hover:text-white leading-snug">
                           • {item}

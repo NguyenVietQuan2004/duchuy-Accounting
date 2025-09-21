@@ -23,7 +23,10 @@ function AboutClient() {
         <div className="relative max-w-[1200px] animate-rtl-opacity py-[120px] h-full pt-[160px] lg:pt-[200px] mx-auto px-4">
           <div className="text-[#003978] max-w-[540px]">
             {/* <div className="text-[18px]">CONTACT</div> */}
-            {/* <div className="text-[36px] font-bold">With us! For Financial Consulting for your Business</div> */}
+            <div className="text-[18px] lg:text-[26px] font-bold">
+              Our accounting firm brings years of experience in accounting, tax, and business advisory to help your
+              business succeed.
+            </div>
           </div>
         </div>
       </div>
@@ -32,10 +35,10 @@ function AboutClient() {
         {/* About Section */}
         <div className="space-y-4">
           {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-900">About us</h2> */}
-          <p className="text-gray-700 leading-relaxed text-justify">
+          {/* <p className="text-gray-700 leading-relaxed text-justify">
             Our accounting firm brings years of experience in accounting, tax, and business advisory to help your
             business succeed.
-          </p>
+          </p> */}
 
           <ul className="space-y-2 text-gray-700 leading-relaxed list-none">
             <li className="flex items-start text-justify gap-2">
