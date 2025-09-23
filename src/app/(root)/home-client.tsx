@@ -60,9 +60,9 @@ function HomeClient() {
         )}
         <div className="relative max-w-[1200px] py-[120px] h-full pt-[100px] lg:pt-[200px] mx-auto px-4">
           <div className="max-w-[540px]">
-            <div className="text-[18px] animate-fade-in delay-500 opacity-0">
+            <div className="text-[18px] lg:text-[22px] font-bold text-[#003978] animate-fade-in delay-500 opacity-0">
               We understand that no two businesses are alike. Whether you're launching your first venture, managing a
-              growing team, or leading a large corporation, your financial needs evolve—and we evolve with you.
+              growing team, or leading a large corporation, your financial needs evolve-and we evolve with you.
             </div>
             {/* <div className="text-4xl lg:text-[48px] relative animate-ltr-opacity font-bold">How may we assist you?</div> */}
           </div>
