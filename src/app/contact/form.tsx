@@ -29,7 +29,7 @@ export default function ContactForm() {
       <Input placeholder="Full Name *" {...register("full_name", { required: "Please enter your full name" })} />
       {errors.full_name && <p className="text-sm text-red-500">{errors.full_name.message}</p>}
 
-      <Input placeholder="Phone Number" {...register("phone_number", { required: "Please enter your phone number" })} />
+      <Input placeholder="Phone Number" {...register("phone_number")} />
       {errors.phone_number && <p className="text-sm text-red-500">{errors.phone_number.message}</p>}
 
       <Input

@@ -42,8 +42,17 @@ function ContactClient() {
               {/* Heading */}
               {/* <h2 className="text-[36px] font-bold mb-2">Interested in Collaborating with Us</h2> */}
               <p className="text-lg text-zinc-800 font-bold  mb-6">
-                Prefer in-person consultation in Sydney: our partner www.mygreatbookkeeper.com.au provides face-to-face
-                services in the Sydney area.
+                Prefer in-person consultation in Sydney: our partner
+                {/* www.mygreatbookkeeper.com.au  */}
+                <a
+                  href="https://www.mygreatbookkeeper.com.au"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#124d9b] mx-1 hover:underline"
+                >
+                  www.mygreatbookkeeper.com.au
+                </a>
+                provides face-to-face services in the Sydney area.
               </p>
 
               {/* Contact Grid */}

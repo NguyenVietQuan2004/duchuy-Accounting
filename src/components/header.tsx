@@ -55,7 +55,10 @@ export default function Header() {
             {/* <Phone size={16} className="text-white" /> */}
             <Mail className="min-w-6 min-h-6 text-white" />
 
-            <span className="font-bold">info@ntnps.com.au</span>
+            {/* <span className="font-bold">info@ntnps.com.au</span> */}
+            <a href="mailto:info@ntnps.com.au" className="font-bold  hover:underline">
+              info@ntnps.com.au
+            </a>
           </div>
         </div>
       </div>
@@ -68,7 +71,11 @@ export default function Header() {
             <span className="opacity-70">
               <br />
             </span>
-            <span className="font-bold ml-1">info@ntnps.com.au</span>
+            <a href="mailto:info@ntnps.com.au" className="font-bold hover:underline">
+              info@ntnps.com.au
+            </a>
+
+            {/* <span className="font-bold ml-1">info@ntnps.com.au</span> */}
           </div>
 
           {/* Drawer Menu */}
