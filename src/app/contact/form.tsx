@@ -17,11 +17,13 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
     // Submit the data here
+    reset();
   };
 
   return (
