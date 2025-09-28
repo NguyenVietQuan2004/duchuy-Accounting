@@ -59,7 +59,7 @@ export default function ContactForm() {
       >
         SEND MESSAGE
       </Button>
-
+      {/* 
       <a
         href="https://www.mygreatbookkeeper.com.au"
         target="_blank"
@@ -67,7 +67,7 @@ export default function ContactForm() {
         className="w-full mt-1 block text-center rounded-lg font-medium text-[16px] bg-[#124D9B] py-3 hover:bg-white hover:text-[#124d9b] border border-transparent hover:border-[#124d9b] transition-all duration-300 text-white"
       >
         SEND MORE
-      </a>
+      </a> */}
     </form>
   );
 }
